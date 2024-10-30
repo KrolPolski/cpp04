@@ -6,13 +6,13 @@
 #    By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 18:10:44 by rboudwin          #+#    #+#              #
-#    Updated: 2024/10/30 11:48:02 by rboudwin         ###   ########.fr        #
+#    Updated: 2024/10/30 13:21:45 by rboudwin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	:= Animal
 CFLAGS  := -Wextra -Wall -Werror -std=c++11
-SRCS	:= main.cpp Animal.cpp Dog.cpp
+SRCS	:= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS	:= ${SRCS:.cpp=.o}
 
 all: $(NAME)

@@ -1,57 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:33:56 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 13:14:37 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:14:43 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 #include <iostream>
 
-Dog::Dog()
+Cat::Cat()
 {
-	type = "Dog";
-	std::cout << "Dog default constructor called" << std::endl;
+	type = "Cat";
+	std::cout << "Cat default constructor called" << std::endl;
 	
 }
 
-Dog::Dog(std::string DogType)
+Cat::Cat(std::string CatType)
 {
-	DogType = "Dog";
-	type = "Dog";
-	std::cout << "Dog constructor called" << std::endl;
+	CatType = "Cat";
+	type = "Cat";
+	std::cout << "Cat constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& other)
+Cat::Cat(const Cat& other)
 {
 	if (this != &other)
     {
         type = other.type;
     }
-    std::cout << "Dog copy constructor called on " << this->type << std::endl;
+    std::cout << "Cat copy constructor called on " << this->type << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& other)
+Cat& Cat::operator=(const Cat& other)
 {
 	if (this != &other)
     {
         type = other.type;
     }
-    std::cout << "Dog copy assignment constructor called on " << this->type << std::endl;
+    std::cout << "Cat copy assignment constructor called on " << this->type << std::endl;
     return (*this);
 }
 
-void Dog::makeSound() const
+void Cat::makeSound() const
 {
-	std::cout << "The dog barks." << std::endl;
+	std::cout << "The Cat meows." << std::endl;
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-	std::cout << "Dog destructor called." << std::endl;
+	std::cout << "Cat destructor called." << std::endl;
 }

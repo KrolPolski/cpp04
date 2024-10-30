@@ -1,57 +1,57 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:33:56 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 13:14:37 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:22:47 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 
-Dog::Dog()
+WrongCat::WrongCat()
 {
-	type = "Dog";
-	std::cout << "Dog default constructor called" << std::endl;
+	type = "WrongCat";
+	std::cout << "WrongCat default constructor called" << std::endl;
 	
 }
 
-Dog::Dog(std::string DogType)
+WrongCat::WrongCat(std::string WrongCatType)
 {
-	DogType = "Dog";
-	type = "Dog";
-	std::cout << "Dog constructor called" << std::endl;
+	WrongCatType = "WrongCat";
+	type = "WrongCat";
+	std::cout << "WrongCat constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& other)
+WrongCat::WrongCat(const WrongCat& other)
 {
 	if (this != &other)
     {
         type = other.type;
     }
-    std::cout << "Dog copy constructor called on " << this->type << std::endl;
+    std::cout << "WrongCat copy constructor called on " << this->type << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
 	if (this != &other)
     {
         type = other.type;
     }
-    std::cout << "Dog copy assignment constructor called on " << this->type << std::endl;
+    std::cout << "WrongCat copy assignment constructor called on " << this->type << std::endl;
     return (*this);
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << "The dog barks." << std::endl;
+	std::cout << "The WrongCat wails like a banshee." << std::endl;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	std::cout << "Dog destructor called." << std::endl;
+	std::cout << "WrongCat destructor called." << std::endl;
 }

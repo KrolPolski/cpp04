@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,57 +10,57 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
 	type = "Amoeba";
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "WrongAnimal default constructor called" << std::endl;
 }
 
-Animal::Animal(std::string animalType)
+WrongAnimal::WrongAnimal(std::string WrongAnimalType)
 {
-	type = animalType;
-	std::cout << "Animal constructor called" << std::endl;
+	type = WrongAnimalType;
+	std::cout << "WrongAnimal constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal& other)
-{
-	if (this != &other)
-    {
-        type = other.type;
-    }
-    std::cout << "Animal copy constructor called on " << this->type << std::endl;
-}
-
-Animal& Animal::operator=(const Animal& other)
+WrongAnimal::WrongAnimal(const WrongAnimal& other)
 {
 	if (this != &other)
     {
         type = other.type;
     }
-    std::cout << "Animal copy assignment constructor called on " << this->type << std::endl;
+    std::cout << "WrongAnimal copy constructor called on " << this->type << std::endl;
+}
+
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
+{
+	if (this != &other)
+    {
+        type = other.type;
+    }
+    std::cout << "WrongAnimal copy assignment constructor called on " << this->type << std::endl;
     return (*this);
 }
 
-std::string Animal::getType() const
+std::string WrongAnimal::getType() const
 {
 	return type;	
 }
 
-void Animal::setType(std::string newType)
+void WrongAnimal::setType(std::string newType)
 {
 	type = newType;		
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
-	std::cout << type << " makes no sound." << std::endl;
+	std::cout << type << " makes the wrong sound." << std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "Animal destructor called on " << this->type << std::endl;
+	std::cout << "WrongAnimal destructor called on " << this->type << std::endl;
 }
 
 	
