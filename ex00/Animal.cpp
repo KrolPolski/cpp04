@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 18:27:48 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 13:17:10 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:09:30 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void Animal::setType(std::string newType)
 
 void Animal::makeSound() const
 {
-	std::cout << type << " makes no sound." << std::endl;
 }
 
 Animal::~Animal()
