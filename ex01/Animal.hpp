@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 18:07:59 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 13:13:28 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:48:48 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	void virtual makeSound() const;
 	std::string getType() const;
 	void setType(std::string newType);
-	~Animal();
+	virtual ~Animal();
 };
 
 

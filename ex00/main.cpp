@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 10:19:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 13:35:34 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 13:46:53 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,9 @@ int main(void)
 		i->makeSound(); //will output the cat sound!
 		j->makeSound();
 		meta->makeSound();	
+		delete(meta);
+		delete(j);
+		delete(i);
 	}
 	{
 		std::cout << "\n\033[31mExecuting WrongAnimal tests:\033[0m\n" << std::endl;
