@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 18:27:48 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/30 10:23:00 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:50:27 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Animal::Animal(const Animal& other)
     {
         type = other.type;
     }
-    std::cout << "Copy constructor called on " << this->type << std::endl;
+    std::cout << "Animal copy constructor called on " << this->type << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& other)
@@ -39,8 +39,18 @@ Animal& Animal::operator=(const Animal& other)
     {
         type = other.type;
     }
-    std::cout << "Copy assignment constructor called on " << this->type << std::endl;
+    std::cout << "Animal copy assignment constructor called on " << this->type << std::endl;
     return (*this);
+}
+
+std::string Animal::getType()
+{
+	return type;	
+}
+
+void Animal::setType(std::string newType)
+{
+	type = newType;		
 }
 
 void Animal::makeSound()
@@ -50,7 +60,7 @@ void Animal::makeSound()
 
 Animal::~Animal()
 {
-	std::cout << "Destructor called on " << this->type << std::endl;
+	std::cout << "Animal destructor called on " << this->type << std::endl;
 }
 
 	
