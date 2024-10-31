@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:21:43 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 16:29:52 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 19:15:40 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,7 @@ AMateria::AMateria(const AMateria& other)
 
 AMateria& AMateria::operator=(const AMateria& other)
 {
-	if (this != &other)
-		this->type = other.type;
+	void(other.type);
 	return (*this);
 }
 

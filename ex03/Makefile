@@ -6,7 +6,7 @@
 #    By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/31 17:08:39 by rboudwin          #+#    #+#              #
-#    Updated: 2024/10/31 17:14:32 by rboudwin         ###   ########.fr        #
+#    Updated: 2024/10/31 19:28:15 by rboudwin         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRCS	:= src/main.cpp \
 		   src/AMateria.cpp \
 		   src/Cure.cpp \
 		   src/Ice.cpp \
-		   src/Character.cpp 
+		   src/Character.cpp \
+		   src/MateriaSource.cpp
 OBJS	:= ${SRCS:.cpp=.o}
 
 all: $(NAME)

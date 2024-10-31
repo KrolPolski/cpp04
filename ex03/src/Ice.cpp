@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:13:35 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 17:59:24 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 19:16:45 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,7 @@ Ice::Ice(const Ice& other)
 
 Ice& Ice::operator=(const Ice& other)
 {
-	if (this != &other)
-	{
-		this->type = other.type;
-	}
+	void(other.type);
 	return (*this);
 }
 

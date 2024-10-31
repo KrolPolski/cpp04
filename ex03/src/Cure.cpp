@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:45:50 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 17:50:53 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 20:03:45 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Cure::Cure()
 {
-	type = "Cure";
+	type = "cure";
 }
 
 Cure::Cure(const Cure& other)
@@ -27,10 +27,7 @@ Cure::Cure(const Cure& other)
 
 Cure& Cure::operator=(const Cure& other)
 {
-	if (this != &other)
-	{
-		this->type = other.type;
-	}
+	void(other.type);
 	return (*this);
 }
 

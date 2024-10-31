@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 15:01:21 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 19:15:54 by rboudwin         ###   ########.fr       */
+/*   Created: 2024/10/31 18:19:39 by rboudwin          #+#    #+#             */
+/*   Updated: 2024/10/31 18:41:13 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
-class ICharacter;
-class AMateria;
-#include "ICharacter.hpp"
+#include "AMateria.hpp"
 
-class AMateria
+class IMateriaSource
 {
-	protected:
-		std::string type;
 	public:
-		AMateria();
-		AMateria(const std::string& type);
-		AMateria(const AMateria& other);
-		AMateria& operator=(const AMateria& other);
-		virtual ~AMateria();
-		const std::string& getType() const;
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target) = 0;
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
 };

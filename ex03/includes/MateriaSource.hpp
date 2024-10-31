@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.hpp                                       :+:      :+:    :+:   */
+/*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 15:01:21 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 19:15:54 by rboudwin         ###   ########.fr       */
+/*   Created: 2024/10/31 18:20:26 by rboudwin          #+#    #+#             */
+/*   Updated: 2024/10/31 19:33:28 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <string>
-class ICharacter;
-class AMateria;
-#include "ICharacter.hpp"
+#include "IMateriaSource.hpp"
+#include <iostream>
 
-class AMateria
+class MateriaSource : public IMateriaSource
 {
-	protected:
-		std::string type;
-	public:
-		AMateria();
-		AMateria(const std::string& type);
-		AMateria(const AMateria& other);
-		AMateria& operator=(const AMateria& other);
-		virtual ~AMateria();
-		const std::string& getType() const;
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target) = 0;
+private:
+	AMateria 	*inventory[4];
+public:
+	MateriaSource();
+	MateriaSource(const MateriaSource&);
+	MateriaSource& operator=(const MateriaSource&);
+	~MateriaSource();
+	virtual void learnMateria(AMateria* m) override; 
+	virtual AMateria* createMateria(std::string const & type) override;
 };
+
