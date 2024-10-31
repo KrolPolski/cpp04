@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:45:17 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 16:45:39 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:07:47 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Cure : AMateria
+class Cure : public AMateria
 {
 	public:
 		Cure();

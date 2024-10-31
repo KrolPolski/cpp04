@@ -6,12 +6,14 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:22:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 16:41:49 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:30:21 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "ICharacter.hpp"
+#include "AMateria.hpp"
+#include <iostream>
 
 class Character : ICharacter
 {
@@ -26,7 +28,7 @@ public:
 	~Character();
 	std::string const & getName() const override;
 	void equip(AMateria* m) override;
-	void unequip(int idx);
+	void unequip(int idx) override;
 	void use(int idx, ICharacter& target) override;
 };
 
