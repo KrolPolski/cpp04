@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:13:35 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 16:46:24 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:59:24 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Ice::~Ice()
 Ice* Ice::clone() const 
 {
 	Ice *ptr = new Ice(*this);
+	std::cout << "An ice materia was cloned" << std::endl;
 	return ptr;
 }
 

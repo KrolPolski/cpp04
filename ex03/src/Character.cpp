@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:39:58 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 17:33:09 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 18:10:18 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,20 +29,57 @@ Character::Character(std::string name)
 	}
 	_name  = name;
 }
-/*
+
 Character::Character(const Character& other)
 {
-	
+	if (this != &other)
+	{
+		this->_name = other._name;
+		for (size_t i = 0; i < 4; i++)
+		{
+			if (other.inventory[i] != nullptr)
+				this->inventory[i] = other.inventory[i]->clone();
+			else
+				this->inventory[i] = nullptr;
+		}
+	}
 }
 
 Character& Character::operator=(const Character& other)
 {
+	for (size_t i = 0; i < 4; i++)
+	{
+		if (this->inventory[i] != nullptr)
+		{
+			delete this->inventory[i];	
+			this->inventory[i] = nullptr;
+		}
+	}
 	
+	if (this != &other)
+	{
+		this->_name = other._name;
+		for (size_t i = 0; i < 4; i++)
+		{
+			if (other.inventory[i] != nullptr)
+				this->inventory[i] = other.inventory[i]->clone();
+			else
+				this->inventory[i] = nullptr;
+		}
+	}
+	return (*this);
 }
-*/
+
 Character::~Character()
 {
-
+	for (size_t i = 0; i < 4; i++)
+	{
+		if (this->inventory[i] != nullptr)
+		{
+			delete this->inventory[i];
+			this->inventory[i] = nullptr;
+		}
+	}
 }
 
 std::string const & Character::getName() const
@@ -57,7 +94,7 @@ void Character::equip(AMateria* m)
 		if (inventory[i] == nullptr)
 		{
 			inventory[i] = m;
-			std::cout << "A materia was equipped in slot i on " << this->getName() << std::endl;
+			std::cout << "A materia was equipped in slot " << i << " on " << this->getName() << std::endl;
 			return ;
 		}
 	}
@@ -66,7 +103,16 @@ void Character::equip(AMateria* m)
 
 void Character::unequip(int idx)
 {
-	inventory[idx] = nullptr;
+	if (idx > 3 || idx < 0)
+	{
+		std::cout << "Nice try, you don't have that many pockets" << std::endl;
+		return ;
+	}
+	if (inventory[idx] != nullptr)
+	{
+		inventory[idx] = nullptr;
+		std::cout << "A materia was unequipped in slot " << idx << " on " << this->getName() << std::endl;
+	}
 }
 
 void Character::use(int idx, ICharacter& target)

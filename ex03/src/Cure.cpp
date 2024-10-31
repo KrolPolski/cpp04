@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:45:50 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 16:46:42 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:50:53 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ Cure::~Cure()
 Cure* Cure::clone() const 
 {
 	Cure *ptr = new Cure(*this);
+	std::cout << "A cure materia was cloned" << std::endl;
 	return ptr;
 }
 

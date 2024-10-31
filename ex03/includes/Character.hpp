@@ -6,7 +6,7 @@
 /*   By: rboudwin <rboudwin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:22:49 by rboudwin          #+#    #+#             */
-/*   Updated: 2024/10/31 17:30:21 by rboudwin         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:37:22 by rboudwin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "AMateria.hpp"
 #include <iostream>
 
-class Character : ICharacter
+class Character : public ICharacter
 {
 private:
 	AMateria 	*inventory[4];
